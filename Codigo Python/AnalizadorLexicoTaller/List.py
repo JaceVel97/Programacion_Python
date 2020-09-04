@@ -34,3 +34,12 @@ class List:
             aux = aux.get_next()
 
         return counter
+
+    def get_type(self, data):
+        aux = self.first
+        while aux is not None:
+            if data == aux.get_content():
+                return aux.get_type()
+            aux = aux.get_next()
+
+        return "No_type"
