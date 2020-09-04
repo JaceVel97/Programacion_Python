@@ -240,7 +240,6 @@ class LexicalAnalizer:
                 stack_operation.push(data, -1)
             else:
                 try:
-
                     if stack_operation.get_size() >= 2:
                         if data == "+":
                             result = float(stack_operation.pop()) + float(stack_operation.pop())
@@ -276,7 +275,7 @@ class LexicalAnalizer:
                         elif data == "^":
                             number2 = float(stack_operation.pop())
                             number1 = float(stack_operation.pop())
-                            print(number1, number2)
+
                             result = pow(number1, number2)
                             stack_operation.push(result, -1)
                     else:
